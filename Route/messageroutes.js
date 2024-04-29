@@ -1,0 +1,7 @@
+const express=require("express");
+const { Sendmessage, Getmessage } = require("../Controllers/messagecontroller");
+const protectRoute = require("../middlewares/Protectroute");
+const messagerouter=express.Router();
+messagerouter.post("/send/:id",protectRoute, Sendmessage);
+messagerouter.get("/:id",protectRoute, Getmessage);
+module.exports=messagerouter;
