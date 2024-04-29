@@ -1,5 +1,5 @@
 const express=require("express");
-const { Sendmessage, Getmessage } = require("../Controllers/messagecontroller");
+const { Sendmessage, Getmessage } = require("../Controllers/Messagecontroller");
 const protectRoute = require("../middlewares/Protectroute");
 const messagerouter=express.Router();
 messagerouter.post("/send/:id",protectRoute, Sendmessage);
